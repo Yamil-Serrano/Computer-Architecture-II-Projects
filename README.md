@@ -16,9 +16,9 @@ The repository is organized into folders, each one corresponding to a class assi
 
 ### Assignment 1: Emoji & Movement
 
-- Part 1 (60%): Draw an emoji on the LED Matrix (25x35) with a white background. Required deliverable: emoji.s drawing a 16x16 emoji at position [5,5].
+- Part 1 (60%): Draw an emoji on the LED Matrix (25x35) with a white background.
 
-- Part 2 (30%): Move the emoji using the D-Pad (moveEmoji.s). The emoji should stop moving when colliding with the matrix boundaries.
+- Part 2 (30%): Move the emoji using the D-Pad. The emoji should stop moving when colliding with the matrix boundaries.
 
 > Note: This repository includes an improved version of the assignment:
 > - Custom emoji (15x16).
