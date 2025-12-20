@@ -1,53 +1,71 @@
-# Computer-Architecture-II-Projects
+# RISC-V LED Matrix Sprite Control
 
-This repository contains the mini-projects and exercises developed for the course  **CIIC 4082 – Computer Architecture II (Fall 2025)** at the University of Puerto Rico, Mayagüez.
+This repository contains a **RISC-V 32-bit Assembly project** developed for the course **CIIC 4082 – Computer Architecture II (Fall 2025)** at the **University of Puerto Rico, Mayagüez**. The project focuses on **graphics rendering and user input handling** using **memory-mapped I/O**, implemented and tested using the **Ripes simulator**.
 
-All projects are implemented in **RISC-V 32-bit Assembly**, making use of the  **Ripes simulator**, which provides an educational environment to explore computer architecture concepts.  Ripes offers tools such as a **32-bit RISC-V processor pipeline visualization**,  a **LED Matrix display**, **D-Pad input device** and others tools that we use for interactive assignments.  
 
-The main goal of these projects is to reinforce the understanding of:  
-- Low-level programming in RISC-V 32-bit Assembly.  
-- Memory-mapped I/O for controlling hardware-like peripherals (LED Matrix, D-Pad).  
-- Concepts of CPU architecture, instruction flow, and efficient resource usage.  
-- Practical applications of theoretical concepts taught in the course (e.g., pipelining, subroutines, exceptions).  
+## Project Overview
+**RISC-V LED Matrix Sprite Control** is an educational project that renders a custom emoji sprite on a **25×35 LED Matrix** and allows the user to move it interactively using a **D-Pad input device**.
 
-## Repository Structure:
+The project reinforces fundamental computer architecture concepts by combining:
+- Low-level RISC-V assembly programming
+- Direct hardware control via memory-mapped I/O
+- Input handling and boundary checking
+- Structured program flow using subroutines
 
-The repository is organized into folders, each one corresponding to a class assignment or practice.
+## Features
 
-### Assignment 1: Emoji & Movement
+- **Custom Emoji Rendering**
+  - Emoji resolution: **15×16 pixels**
+  - Pixel data stored using `.word` directives
+  - Colors encoded as `0x00RRGGBB`
 
-- Part 1 (60%): Draw an emoji on the LED Matrix (25x35) with a white background.
+- **D-Pad Controlled Movement**
+  - Real-time movement using Ripes D-Pad
+  - Boundary collision detection
+  - Prevents movement outside the LED Matrix limits
 
-- Part 2 (30%): Move the emoji using the D-Pad. The emoji should stop moving when colliding with the matrix boundaries.
-
-> Note: This repository includes an improved version of the assignment:
-> - Custom emoji (15x16).
-> - Future expansions may include animations or additional graphic variations.
+- **Low-Level Hardware Interaction**
+  - Direct manipulation of memory-mapped LED Matrix
+  - Input polling via memory-mapped registers
 
 ## Emoji Representation
 
-The emoji used in this project has a resolution of **15 pixels wide x 16 pixels high**. Each pixel was mapped into a `.word`, where every color was written in hexadecimal format (`0x00RRGGBB`).  Each `.word` corresponds to one row of the emoji in the LED Matrix.  
+The emoji sprite is represented as a **15×16 pixel bitmap**.  
+Each row of the sprite is stored as a `.word` containing the pixel color data in hexadecimal format.
 
-This way, the sprite can be easily drawn on the **25x35 LED Matrix** provided by Ripes.
+This design allows the sprite to be efficiently rendered and repositioned within the **25×35 LED Matrix** provided by Ripes.
+
+![Emoji on LED Matrix](https://github.com/user-attachments/assets/ab5ba1a8-9e1e-408f-85fe-17ce76191f42)
 
 
-<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/ab5ba1a8-9e1e-408f-85fe-17ce76191f42" />
+## Tools & Technologies
 
+- **RISC-V 32-bit Assembly**
+- **Ripes Simulator**
+  - 32-bit RISC-V pipeline visualization
+  - LED Matrix peripheral
+  - D-Pad input device
 
-### Other Projects
+## Learning Objectives
 
-As the course progresses, additional assignments/projects will be added here:
+This project was designed to reinforce:
 
-## Requirements:
+- RISC-V instruction set usage and register management
+- Memory-mapped I/O concepts
+- Subroutine structure and control flow
+- Practical application of CPU architecture theory
+- Efficient handling of limited hardware resources
 
-- Ripes – RISC-V architecture simulator
+## Requirements
 
-- Basic knowledge of RISC-V Assembly.
+- **Ripes – RISC-V Architecture Simulator**
+- Basic understanding of **RISC-V Assembly**
 
 ## License
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-If you have any questions or suggestions, feel free to reach out to me:
-GitHub: [Neowizen](https://github.com/Yamil-Serrano)
+If you have any questions or suggestions, feel free to reach out:
+- **GitHub:** [Neowizen](https://github.com/Yamil-Serrano)
